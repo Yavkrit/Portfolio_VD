@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f4ef;
+  --background-elevated: #ffffff;
+  --background-inset: #ece8e0;
+  --foreground: #15171a;
+  --foreground-muted: #5b6168;
+  --foreground-subtle: #8a8f95;
+
+  --accent: #b8710a;
+  --accent-foreground: #ffffff;
+  --accent-secondary: #0f8c7d;
+
+  --border: #e0dbd0;
+  --border-strong: #cac2b2;
+
+  --grid-line: rgba(21, 23, 26, 0.06);
+
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: #0b0d0e;
+  --background-elevated: #14171a;
+  --background-inset: #101214;
+  --foreground: #edeef0;
+  --foreground-muted: #9aa0a6;
+  --foreground-subtle: #666c72;
+
+  --accent: #e8a33d;
+  --accent-foreground: #14171a;
+  --accent-secondary: #5eead4;
+
+  --border: #262b2f;
+  --border-strong: #3a4046;
+
+  --grid-line: rgba(237, 238, 240, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-background-inset: var(--background-inset);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-secondary: var(--accent-secondary);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+
+  --radius-panel: var(--radius);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+
+  /* Schematic hairline grid, used behind hero / section dividers */
+  .schematic-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
