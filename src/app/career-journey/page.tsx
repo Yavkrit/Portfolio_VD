@@ -1,34 +1,45 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, FileText } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { ProfileLinks } from "@/components/sections/profile-links";
 import { careerTimeline, education, profile } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Biography — Dr. V. D. Shivling",
+  title: "Career Journey — Dr. V. D. Shivling",
   description:
-    "The career and education of Dr. V. D. Shivling, Chief Scientist at CSIR-CSIO, from Scientist B in 1993 to Chief Scientist today.",
+    "The career journey and education of Dr. V. D. Shivling, Chief Scientist at CSIR-CSIO, from Scientist B in 1993 to Chief Scientist today.",
 };
 
-export default function BiographyPage() {
+export default function CareerJourneyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Biography"
+        eyebrow="Career Journey"
         title="Thirty-two years at CSIR-CSIO"
         description="A career built one instrument at a time — from an entry-level Scientist B post in 1993 to leading the Agrionics programme as Chief Scientist today."
       />
 
       <section className="border-b border-border py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset">
-            <Image
-              src="/images/portrait-1.png"
-              alt={profile.name}
-              fill
-              sizes="(min-width: 1024px) 24rem, 80vw"
-              className="object-cover"
-            />
+          <div>
+            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset">
+              <Image
+                src="/images/portrait-1.png"
+                alt={profile.name}
+                fill
+                sizes="(min-width: 1024px) 24rem, 80vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-6 max-w-sm">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
+                Research Profiles
+              </p>
+              <ProfileLinks className="mt-3" />
+            </div>
           </div>
 
           <div>
@@ -51,7 +62,7 @@ export default function BiographyPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading eyebrow="Education" title="Academic foundation" />
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -70,6 +81,31 @@ export default function BiographyPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <Link
+            href="/resume"
+            className="group flex flex-wrap items-center justify-between gap-4 border border-border p-8 transition-colors hover:border-accent"
+          >
+            <div className="flex items-center gap-4">
+              <FileText className="text-accent" size={28} strokeWidth={1.5} />
+              <div>
+                <p className="font-display text-xl text-foreground">
+                  View the full resume
+                </p>
+                <p className="mt-1 text-sm text-foreground-muted">
+                  A single-page summary of the career above — view or download as PDF.
+                </p>
+              </div>
+            </div>
+            <ArrowUpRight
+              className="text-foreground-muted transition-colors group-hover:text-accent"
+              size={20}
+            />
+          </Link>
         </div>
       </section>
     </>

@@ -9,6 +9,7 @@ import { profile } from "@/data/profile";
 import { scholarMetrics } from "@/data/publications";
 import { Button } from "@/components/ui/button";
 import { useMounted } from "@/lib/use-mounted";
+import { ProfileLinks } from "@/components/sections/profile-links";
 
 const HeroScene = dynamic(
   () => import("./hero-scene").then((m) => m.HeroScene),
@@ -88,12 +89,19 @@ export function Hero() {
             >
               Explore the Research
             </Button>
-            <Link href="/biography">
-              <Button variant="outline">Read the Biography</Button>
+            <Link href="/career-journey">
+              <Button variant="outline">Read the Career Journey</Button>
             </Link>
           </div>
 
-          <dl className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-border pt-8 sm:grid-cols-4">
+          <div className="mt-10 flex items-center gap-4">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
+              Research Profiles
+            </span>
+            <ProfileLinks />
+          </div>
+
+          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-border pt-8 sm:grid-cols-4">
             {metrics.map((metric) => (
               <div key={metric.label}>
                 <dt className="font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">

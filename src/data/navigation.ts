@@ -3,6 +3,7 @@ export const navLinks = [
   { label: "Publications", href: "/publications" },
   { label: "Patents & Innovations", href: "/innovations" },
   { label: "Recognition", href: "/recognition" },
-  { label: "Biography", href: "/biography" },
+  { label: "Career Journey", href: "/career-journey" },
+  { label: "Resume", href: "/resume" },
   { label: "Contact", href: "/contact" },
 ] as const;

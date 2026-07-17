@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { navLinks } from "@/data/navigation";
 import { profile } from "@/data/profile";
+import { ProfileLinks } from "@/components/sections/profile-links";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <p className="font-display text-xl text-foreground">{profile.name}</p>
             <p className="mt-2 max-w-sm text-sm text-foreground-muted">
@@ -41,6 +42,13 @@ export function SiteFooter() {
               <br />
               Sector 30-C, Chandigarh 160030, India
             </p>
+          </div>
+
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
+              Profiles
+            </p>
+            <ProfileLinks className="mt-3" />
           </div>
         </div>
 
