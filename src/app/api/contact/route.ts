@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     const adminResults = await Promise.allSettled(
       toEmails.map((recipient) =>
         resend.emails.send({
-          from: "Portfolio Contact Form <onboarding@resend.dev>",
+          from: "Dr. V. D. Shivling <contact@vdshivling.in>",
           to: recipient,
           replyTo: email,
           subject: admin.subject,
@@ -120,7 +120,7 @@ export async function POST(request: Request) {
     // the one that matters, so a failure here shouldn't fail the request.
     const confirmation = visitorConfirmationEmail({ name, subject });
     const { error: confirmationError } = await resend.emails.send({
-      from: "Dr. V. D. Shivling <onboarding@resend.dev>",
+      from: "Dr. V. D. Shivling <contact@vdshivling.in>",
       to: email,
       subject: confirmation.subject,
       html: confirmation.html,
