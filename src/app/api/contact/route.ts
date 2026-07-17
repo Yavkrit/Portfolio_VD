@@ -78,18 +78,38 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
 
   try {
+    // Sent as separate per-recipient calls rather than one batched `to`
+    // array: Resend's sandbox mode (no verified domain yet) rejects the
+    // *entire* send if any recipient isn't the account's verified address,
+    // so batching would silently block delivery to every recipient just
+    // because one of them isn't verified yet. Isolating each recipient
+    // means the ones that can deliver today still do, independently.
     const admin = adminNotificationEmail({ name, email, organization, subject, message });
-    const { error: adminError } = await resend.emails.send({
-      from: "Portfolio Contact Form <onboarding@resend.dev>",
-      to: toEmails,
-      replyTo: email,
-      subject: admin.subject,
-      html: admin.html,
-      text: admin.text,
-    });
+    const adminResults = await Promise.allSettled(
+      toEmails.map((recipient) =>
+        resend.emails.send({
+          from: "Portfolio Contact Form <onboarding@resend.dev>",
+          to: recipient,
+          replyTo: email,
+          subject: admin.subject,
+          html: admin.html,
+          text: admin.text,
+        })
+      )
+    );
 
-    if (adminError) {
-      console.error("Failed to send admin notification email:", adminError);
+    const failures = adminResults.flatMap((result, i) => {
+      if (result.status === "rejected") return [{ to: toEmails[i], error: result.reason }];
+      if (result.value.error) return [{ to: toEmails[i], error: result.value.error }];
+      return [];
+    });
+    const succeeded = toEmails.filter((_, i) => !failures.some((f) => f.to === toEmails[i]));
+
+    if (failures.length > 0) {
+      console.error("Some admin notification recipients failed:", failures);
+    }
+
+    if (succeeded.length === 0) {
       return NextResponse.json(
         { error: "Something went wrong sending your message. Please try again." },
         { status: 502 }
