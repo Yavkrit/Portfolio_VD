@@ -4,9 +4,9 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { publications, scholarMetrics } from "@/data/publications";
 
 export const metadata: Metadata = {
-  title: "Publications — Dr. V. D. Shivling",
+  title: "Publications — Dr Dattatraya Vhatkar",
   description:
-    "Peer-reviewed publications and citation metrics for Dr. V. D. Shivling, sourced from Google Scholar.",
+    "Peer-reviewed publications and citation metrics for Dr Dattatraya Vhatkar, sourced from Google Scholar.",
 };
 
 export default function PublicationsPage() {

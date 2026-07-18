@@ -1,19 +1,21 @@
-import { GraduationCap, Network, BarChart3, Landmark, type LucideIcon } from "lucide-react";
+import { BarChart3, Briefcase, Landmark, type LucideIcon } from "lucide-react";
 import { profileLinks } from "@/data/profile-links";
 import { cn } from "@/lib/utils";
+import { GoogleScholarMark, ResearchGateMark } from "./brand-icons";
 
-const ICONS: Record<string, LucideIcon> = {
-  scholar: GraduationCap,
-  researchgate: Network,
+const LUCIDE_ICONS: Record<string, LucideIcon> = {
   adindex: BarChart3,
   csio: Landmark,
+  // LinkedIn has no license-safe mark available (see brand-icons.tsx note),
+  // so it gets the same generic-icon treatment as the institutional links.
+  linkedin: Briefcase,
 };
 
 export function ProfileLinks({ className }: { className?: string }) {
   return (
     <ul className={cn("flex items-center gap-3", className)}>
       {profileLinks.map((link) => {
-        const Icon = ICONS[link.key];
+        const LucideMark = LUCIDE_ICONS[link.key];
         return (
           <li key={link.key}>
             <a
@@ -24,7 +26,9 @@ export function ProfileLinks({ className }: { className?: string }) {
               aria-label={`${link.label} (opens in a new tab)`}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors hover:border-accent hover:text-accent"
             >
-              <Icon size={16} strokeWidth={1.75} />
+              {link.key === "scholar" && <GoogleScholarMark size={16} />}
+              {link.key === "researchgate" && <ResearchGateMark size={16} />}
+              {LucideMark && <LucideMark size={16} strokeWidth={1.75} />}
             </a>
           </li>
         );

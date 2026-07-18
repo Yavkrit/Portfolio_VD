@@ -10,6 +10,11 @@ export const profileLinks = [
     href: "https://www.researchgate.net/profile/Dattatraya-Vhatkar",
   },
   {
+    key: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/dr-dattatraya-vhatkar-2353797/",
+  },
+  {
     key: "adindex",
     label: "AD Scientific Index",
     href: "https://adscientificindex.com/scientist/vd-shivling/5452813/",

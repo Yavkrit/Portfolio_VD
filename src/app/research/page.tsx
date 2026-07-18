@@ -11,7 +11,7 @@ import {
 import { researchImpactSummary, phdSupervision } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Research — Dr. V. D. Shivling",
+  title: "Research — Dr Dattatraya Vhatkar",
   description:
     "Research areas, funded projects, and supervised scholarship in agrionics, sensor instrumentation, and applied electronics.",
 };

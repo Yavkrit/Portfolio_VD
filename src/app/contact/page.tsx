@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Contact — Dr. V. D. Shivling",
+  title: "Contact — Dr Dattatraya Vhatkar",
   description:
-    "Get in touch with Dr. V. D. Shivling for research collaboration, technology transfer, or speaking engagements.",
+    "Get in touch with Dr Dattatraya Vhatkar for research collaboration, technology transfer, or speaking engagements.",
 };
 
 export default function ContactPage() {

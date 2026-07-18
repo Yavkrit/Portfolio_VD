@@ -15,25 +15,25 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto grid h-16 max-w-6xl grid-cols-[auto_1fr_auto] items-center gap-4 px-6">
         <Link
           href="/"
-          className="font-mono text-[13px] tracking-tight text-foreground"
+          className="font-mono text-[13px] tracking-tight text-foreground whitespace-nowrap"
           onClick={() => setOpen(false)}
         >
-          V.D. SHIVLING
-          <span className="ml-2 hidden text-foreground-subtle sm:inline">
+          DATTATRAYA VHATKAR
+          <span className="ml-2 hidden text-foreground-subtle xl:inline">
             / Chief Scientist, CSIR-CSIO
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center justify-center gap-6 xl:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "font-mono text-[12px] uppercase tracking-wider text-foreground-muted transition-colors hover:text-foreground",
+                "whitespace-nowrap font-mono text-[12px] uppercase tracking-wider text-foreground-muted transition-colors hover:text-foreground",
                 pathname === link.href && "text-accent"
               )}
             >
@@ -42,11 +42,11 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-3">
           <ThemeToggle />
           <button
             type="button"
-            className="flex h-9 w-9 items-center justify-center text-foreground lg:hidden"
+            className="flex h-9 w-9 items-center justify-center text-foreground xl:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -63,7 +63,7 @@ export function SiteHeader() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-border/60 lg:hidden"
+            className="overflow-hidden border-t border-border/60 xl:hidden"
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (

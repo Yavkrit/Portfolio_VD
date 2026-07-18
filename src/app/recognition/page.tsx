@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import { BadgeCheck } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { Card } from "@/components/ui/card";
 import { honors } from "@/data/recognition";
+import { certifications } from "@/data/certifications";
 import { professionalAffiliations, visionStatement } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Recognition — Dr. V. D. Shivling",
+  title: "Recognition — Dr Dattatraya Vhatkar",
   description:
-    "Institutional leadership, honors, and professional affiliations of Dr. V. D. Shivling.",
+    "Institutional leadership, honors, and professional affiliations of Dr Dattatraya Vhatkar.",
 };
 
 export default function RecognitionPage() {
@@ -59,6 +62,36 @@ export default function RecognitionPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-border py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            eyebrow="Licenses & Certifications"
+            title="Verified credentials"
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {certifications.map((cert) => (
+              <Card key={cert.title} className="flex gap-4">
+                <BadgeCheck
+                  className="mt-1 shrink-0 text-accent"
+                  size={20}
+                  strokeWidth={1.5}
+                />
+                <div>
+                  <p className="font-display text-lg text-foreground">{cert.title}</p>
+                  <p className="mt-1 text-sm text-foreground-muted">
+                    {cert.organization}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] text-foreground-subtle">
+                    {cert.issued && <span>Issued {cert.issued}</span>}
+                    <span>ID {cert.credentialId}</span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

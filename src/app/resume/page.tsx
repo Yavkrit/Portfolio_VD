@@ -5,9 +5,9 @@ import { researchImpactSummary } from "@/data/profile";
 import { scholarMetrics } from "@/data/publications";
 
 export const metadata: Metadata = {
-  title: "Resume — Dr. V. D. Shivling",
+  title: "Resume — Dr Dattatraya Vhatkar",
   description:
-    "View or download the resume of Dr. V. D. Shivling, Chief Scientist at CSIR-CSIO.",
+    "View or download the resume of Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO.",
 };
 
 const quickFacts = [

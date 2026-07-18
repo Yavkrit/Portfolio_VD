@@ -12,7 +12,7 @@ const WRAPPER_START = (preheader: string) => `<!DOCTYPE html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr. V. D. Shivling</title>
+    <title>Dr Dattatraya Vhatkar</title>
   </head>
   <body style="margin:0;padding:0;background-color:#f6f4ef;font-family:Georgia,'Times New Roman',serif;">
     <div style="display:none;max-height:0;overflow:hidden;">${escapeHtml(preheader)}</div>
@@ -23,7 +23,7 @@ const WRAPPER_START = (preheader: string) => `<!DOCTYPE html>
             <tr>
               <td style="padding:28px 32px;border-bottom:2px solid #b8710a;">
                 <span style="font-family:'Courier New',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b8710a;">
-                  Dr. V. D. Shivling
+                  Dr Dattatraya Vhatkar
                 </span>
                 <div style="font-family:'Courier New',monospace;font-size:11px;color:#8a8f95;margin-top:4px;">
                   Chief Scientist &middot; CSIR&ndash;CSIO
@@ -116,12 +116,12 @@ export function visitorConfirmationEmail(data: { name: string; subject: string }
     </p>
     <p style="margin:0;font-size:14px;line-height:1.7;color:#15171a;">
       Regards,<br />
-      Dr. V. D. Shivling<br />
+      Dr Dattatraya Vhatkar<br />
       <span style="color:#5b6168;">Chief Scientist, CSIR&ndash;CSIO</span>
     </p>
   ${WRAPPER_END}`;
 
-  const text = `Dear ${name},\n\nThank you for your message regarding "${subject}." This is a confirmation that it has been received and will be reviewed personally. Please allow a few business days for a response.\n\nRegards,\nDr. V. D. Shivling\nChief Scientist, CSIR-CSIO`;
+  const text = `Dear ${name},\n\nThank you for your message regarding "${subject}." This is a confirmation that it has been received and will be reviewed personally. Please allow a few business days for a response.\n\nRegards,\nDr Dattatraya Vhatkar\nChief Scientist, CSIR-CSIO`;
 
   return { subject: "We've received your message", html, text };
 }

@@ -1,6 +1,6 @@
 export const profile = {
-  name: "Dr. V. D. Shivling",
-  fullName: "Dr. Vhatkar Dattatraya Shivling",
+  name: "Dr Dattatraya Vhatkar",
+  fullName: "Dr Dattatraya Vhatkar",
   title: "Chief Scientist",
   division: "IMCS Division",
   institute: "CSIR – Central Scientific Instruments Organisation (CSIO)",
@@ -53,9 +53,10 @@ export const leadershipRoles = [
   { role: "Member, ACR Collegium for Principal & Sr. Principal Scientist", org: "CSIR-CSIO", period: "2022 – Present" },
 ] as const;
 
+// Fellow (IETE) and Life Member (Instrument Society of India) are covered
+// with full credential detail in data/certifications.ts — kept out of this
+// plain list to avoid duplicating them.
 export const professionalAffiliations = [
-  "Fellow, Institution of Electronics and Telecommunication Engineers (IETE)",
-  "Life Member, Instrument Society of India",
   "Member, Indian Phytopathological Society",
   "Member, Indian Meteorological Society",
 ] as const;

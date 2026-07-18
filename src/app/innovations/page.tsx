@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { patents, technologyTransfers } from "@/data/recognition";
 
 export const metadata: Metadata = {
-  title: "Patents & Innovations — Dr. V. D. Shivling",
+  title: "Patents & Innovations — Dr Dattatraya Vhatkar",
   description:
     "Filed patents and technologies transferred to industry partners across India.",
 };

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Download, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const RESUME_PATH = "/documents/dr-vd-shivling-resume.pdf";
-const RESUME_FILENAME = "Dr-VD-Shivling-Resume.pdf";
+const RESUME_PATH = "/documents/dr-dattatraya-vhatkar-resume.pdf";
+const RESUME_FILENAME = "Dr-Dattatraya-Vhatkar-Resume.pdf";
 
 export function ResumeViewer() {
   return (
@@ -37,7 +37,7 @@ export function ResumeViewer() {
       <div className="hidden aspect-[8.5/11] w-full bg-background-inset md:block">
         <iframe
           src={`${RESUME_PATH}#view=FitH`}
-          title="Dr. V. D. Shivling — Resume preview"
+          title="Dr Dattatraya Vhatkar — Resume preview"
           className="h-full w-full"
         />
       </div>

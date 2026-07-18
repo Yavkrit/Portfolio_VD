@@ -25,9 +25,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. V. D. Shivling — Chief Scientist, CSIR-CSIO",
+  title: "Dr Dattatraya Vhatkar — Chief Scientist, CSIR-CSIO",
   description:
-    "Dr. V. D. Shivling, Chief Scientist at CSIR-CSIO — three decades of sensor and instrumentation research for agrionics, pre- and post-harvest technologies, and applied electronics.",
+    "Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO — three decades of sensor and instrumentation research for agrionics, pre- and post-harvest technologies, and applied electronics.",
 };
 
 export default function RootLayout({

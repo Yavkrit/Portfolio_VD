@@ -8,9 +8,9 @@ import { ProfileLinks } from "@/components/sections/profile-links";
 import { careerTimeline, education, profile } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Career Journey — Dr. V. D. Shivling",
+  title: "Career Journey — Dr Dattatraya Vhatkar",
   description:
-    "The career journey and education of Dr. V. D. Shivling, Chief Scientist at CSIR-CSIO, from Scientist B in 1993 to Chief Scientist today.",
+    "The career journey and education of Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO, from Scientist B in 1993 to Chief Scientist today.",
 };
 
 export default function CareerJourneyPage() {
