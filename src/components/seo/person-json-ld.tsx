@@ -3,10 +3,9 @@ import { profileLinks, ORCID_ID } from "@/data/profile-links";
 import { SITE_URL } from "@/lib/site";
 
 export function PersonJsonLd() {
-  const sameAs = [
-    ...profileLinks.map((link) => link.href),
-    ...(ORCID_ID ? [`https://orcid.org/${ORCID_ID}`] : []),
-  ];
+  // profileLinks already includes the ORCID entry once ORCID_ID is set
+  // (see data/profile-links.ts), so no need to add it again here.
+  const sameAs = profileLinks.map((link) => link.href);
 
   const jsonLd = {
     "@context": "https://schema.org",

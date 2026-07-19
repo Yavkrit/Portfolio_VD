@@ -3,7 +3,7 @@
 // moment one exists, e.g. by registering at https://orcid.org, and it will
 // appear automatically as a profile icon and in the site's structured data
 // (see src/components/seo/person-json-ld.tsx, which imports this constant).
-export const ORCID_ID = "";
+export const ORCID_ID = "0009-0007-4627-7733";
 
 export const profileLinks = [
   {
