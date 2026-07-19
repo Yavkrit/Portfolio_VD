@@ -1,25 +1,7 @@
 import { NextResponse } from "next/server";
-import { z } from "zod";
 import { Resend } from "resend";
 import { adminNotificationEmail, visitorConfirmationEmail } from "@/lib/email-templates";
-
-const MIN_SUBMIT_TIME_MS = 1500;
-
-const contactSchema = z.object({
-  name: z.string().trim().min(2).max(120),
-  email: z.string().trim().email().max(200),
-  organization: z.string().trim().max(200).optional().or(z.literal("")),
-  subject: z.string().trim().min(2).max(150),
-  message: z.string().trim().min(10).max(4000),
-  // honeypot field — real users never fill this in
-  company_website: z.string().max(0).optional().or(z.literal("")),
-  // timestamp (ms) captured when the form first rendered client-side
-  started_at: z.coerce.number().optional(),
-});
-
-function countUrls(text: string): number {
-  return (text.match(/https?:\/\/|www\./gi) ?? []).length;
-}
+import { contactSchema, isSpamSubmission } from "@/lib/contact-spam";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -37,22 +19,13 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, organization, subject, message, company_website, started_at } =
-    parsed.data;
+  const { name, email, organization, subject, message } = parsed.data;
 
   // Spam heuristics: honeypot filled, submitted implausibly fast, or
   // message is link-heavy. Report success without sending, so bots get
   // no signal that they were caught.
-  const submittedTooFast =
-    typeof started_at === "number" && Date.now() - started_at < MIN_SUBMIT_TIME_MS;
-  const isSpam = Boolean(company_website) || submittedTooFast || countUrls(message) > 2;
-
-  if (isSpam) {
-    console.warn("Contact form submission flagged as spam and dropped.", {
-      submittedTooFast,
-      hasHoneypot: Boolean(company_website),
-      urlCount: countUrls(message),
-    });
+  if (isSpamSubmission(parsed.data)) {
+    console.warn("Contact form submission flagged as spam and dropped.");
     return NextResponse.json({ ok: true });
   }
 

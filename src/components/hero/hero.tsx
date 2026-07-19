@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -10,11 +9,7 @@ import { scholarMetrics } from "@/data/publications";
 import { Button } from "@/components/ui/button";
 import { useMounted } from "@/lib/use-mounted";
 import { ProfileLinks } from "@/components/sections/profile-links";
-
-const HeroScene = dynamic(
-  () => import("./hero-scene").then((m) => m.HeroScene),
-  { ssr: false }
-);
+import { HeroScene } from "./hero-scene";
 
 const metrics = [
   { label: "Years in Research", value: "30+" },
@@ -54,9 +49,9 @@ export function Hero() {
       onPointerMove={handlePointerMove}
       className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden"
     >
-      <div className="schematic-grid absolute inset-0 opacity-60" />
+      <div className="schematic-grid absolute inset-0 opacity-60" aria-hidden="true" />
       {mounted && (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" aria-hidden="true">
           <HeroScene lineColor={lineColor} sweepColor={sweepColor} />
         </div>
       )}
@@ -128,7 +123,7 @@ export function Hero() {
           />
           <motion.div
             style={{ x: portraitX, y: portraitY }}
-            className="relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset"
+            className="portrait-frame relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset"
           >
             <Image
               src="/images/portrait-2.png"

@@ -6,9 +6,12 @@
   --background-inset: #ece8e0;
   --foreground: #15171a;
   --foreground-muted: #5b6168;
-  --foreground-subtle: #8a8f95;
+  /* #666b70 (was #8a8f95) — darkened to clear 4.5:1 AA against this background */
+  --foreground-subtle: #666b70;
 
-  --accent: #b8710a;
+  /* #965c08 (was #b8710a) — darkened to clear 4.5:1 AA both as text and as
+     white-on-accent button fill; same amber hue/saturation, just deeper */
+  --accent: #965c08;
   --accent-foreground: #ffffff;
   --accent-secondary: #0f8c7d;
 
@@ -26,7 +29,8 @@
   --background-inset: #101214;
   --foreground: #edeef0;
   --foreground-muted: #9aa0a6;
-  --foreground-subtle: #666c72;
+  /* #8e949a (was #666c72) — lightened to clear 4.5:1 AA against this background */
+  --foreground-subtle: #8e949a;
 
   --accent: #e8a33d;
   --accent-foreground: #14171a;
@@ -86,6 +90,12 @@
       linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
       linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
     background-size: 48px 48px;
+  }
+
+  /* Softens the portrait's dark studio backdrop against the light-mode
+     paper background, which otherwise reads as an abrupt hard-edged box. */
+  .portrait-frame {
+    box-shadow: 0 30px 60px -25px var(--border-strong);
   }
 
   .tabular-nums {

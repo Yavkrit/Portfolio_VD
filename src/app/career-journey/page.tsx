@@ -5,13 +5,16 @@ import { ArrowUpRight, FileText } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { ProfileLinks } from "@/components/sections/profile-links";
-import { careerTimeline, education, profile } from "@/data/profile";
+import { careerTimeline, education, phdSupervision, profile } from "@/data/profile";
+import { buildMetadata } from "@/lib/metadata";
+import { Card } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Career Journey — Dr Dattatraya Vhatkar",
+export const metadata: Metadata = buildMetadata({
+  title: "Career Journey",
   description:
     "The career journey and education of Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO, from Scientist B in 1993 to Chief Scientist today.",
-};
+  path: "/career-journey",
+});
 
 export default function CareerJourneyPage() {
   return (
@@ -25,7 +28,7 @@ export default function CareerJourneyPage() {
       <section className="border-b border-border py-20">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset">
+            <div className="portrait-frame relative aspect-[4/5] w-full max-w-sm overflow-hidden border border-border-strong bg-background-inset">
               <Image
                 src="/images/portrait-1.png"
                 alt={profile.name}
@@ -39,6 +42,13 @@ export default function CareerJourneyPage() {
                 Research Profiles
               </p>
               <ProfileLinks className="mt-3" />
+              {profile.formerName && (
+                <p className="mt-4 text-xs text-foreground-subtle">
+                  Formerly published as{" "}
+                  <span className="text-foreground-muted">{profile.formerName}</span> —
+                  the same individual as {profile.name}.
+                </p>
+              )}
             </div>
           </div>
 
@@ -79,6 +89,20 @@ export default function CareerJourneyPage() {
                   </p>
                 )}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading eyebrow="Mentorship" title="Doctoral scholars under supervision" />
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {phdSupervision.map((s) => (
+              <Card key={s.student}>
+                <p className="font-display text-lg text-foreground">{s.student}</p>
+                <p className="mt-2 text-sm text-foreground-muted">{s.area}</p>
+              </Card>
             ))}
           </div>
         </div>

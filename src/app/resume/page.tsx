@@ -3,12 +3,14 @@ import { PageHero } from "@/components/sections/page-hero";
 import { ResumeViewer } from "@/components/resume/resume-viewer";
 import { researchImpactSummary } from "@/data/profile";
 import { scholarMetrics } from "@/data/publications";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Resume — Dr Dattatraya Vhatkar",
+export const metadata: Metadata = buildMetadata({
+  title: "Resume",
   description:
     "View or download the resume of Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO.",
-};
+  path: "/resume",
+});
 
 const quickFacts = [
   { label: "Experience", value: "32+ years" },

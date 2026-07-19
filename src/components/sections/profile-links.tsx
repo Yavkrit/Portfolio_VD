@@ -1,7 +1,7 @@
 import { BarChart3, Briefcase, Landmark, type LucideIcon } from "lucide-react";
 import { profileLinks } from "@/data/profile-links";
 import { cn } from "@/lib/utils";
-import { GoogleScholarMark, ResearchGateMark } from "./brand-icons";
+import { GoogleScholarMark, ResearchGateMark, OrcidMark } from "./brand-icons";
 
 const LUCIDE_ICONS: Record<string, LucideIcon> = {
   adindex: BarChart3,
@@ -28,6 +28,7 @@ export function ProfileLinks({ className }: { className?: string }) {
             >
               {link.key === "scholar" && <GoogleScholarMark size={16} />}
               {link.key === "researchgate" && <ResearchGateMark size={16} />}
+              {link.key === "orcid" && <OrcidMark size={16} />}
               {LucideMark && <LucideMark size={16} strokeWidth={1.75} />}
             </a>
           </li>

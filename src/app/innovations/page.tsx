@@ -4,12 +4,14 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { patents, technologyTransfers } from "@/data/recognition";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Patents & Innovations — Dr Dattatraya Vhatkar",
+export const metadata: Metadata = buildMetadata({
+  title: "Patents & Innovations",
   description:
     "Filed patents and technologies transferred to industry partners across India.",
-};
+  path: "/innovations",
+});
 
 export default function InnovationsPage() {
   return (

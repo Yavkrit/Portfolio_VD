@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { JumpNav } from "@/components/sections/jump-nav";
+import { BackToTop } from "@/components/sections/back-to-top";
 import { Card } from "@/components/ui/card";
 import {
   researchAreas,
@@ -8,13 +10,15 @@ import {
   technologiesAsPI,
   prototypesDeveloped,
 } from "@/data/projects";
-import { researchImpactSummary, phdSupervision } from "@/data/profile";
+import { researchImpactSummary } from "@/data/profile";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Research — Dr Dattatraya Vhatkar",
+export const metadata: Metadata = buildMetadata({
+  title: "Research",
   description:
     "Research areas, funded projects, and supervised scholarship in agrionics, sensor instrumentation, and applied electronics.",
-};
+  path: "/research",
+});
 
 export default function ResearchPage() {
   return (
@@ -25,7 +29,16 @@ export default function ResearchPage() {
         description="Thirty-four funded projects spanning agrionics, microwave-absorbing nanomaterials, and biomechanics — engineered with field deployment, not publication alone, as the goal."
       />
 
-      <section className="border-b border-border py-20">
+      <JumpNav
+        items={[
+          { href: "#focus-areas", label: "Focus Areas" },
+          { href: "#funded-projects", label: "Funded Projects" },
+          { href: "#technologies", label: "Technologies & Prototypes" },
+          { href: "#scale", label: "Programme Scale" },
+        ]}
+      />
+
+      <section id="focus-areas" className="scroll-mt-32 border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading eyebrow="Focus Areas" title="Where the work concentrates" />
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -41,7 +54,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="border-b border-border py-20">
+      <section id="funded-projects" className="scroll-mt-32 border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="Funded Projects"
@@ -74,7 +87,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="border-b border-border py-20">
+      <section id="technologies" className="scroll-mt-32 border-b border-border py-20">
         <div className="mx-auto max-w-6xl px-6 grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -108,7 +121,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="border-b border-border py-20">
+      <section id="scale" className="scroll-mt-32 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading eyebrow="Scale" title="Research programme at a glance" />
           <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -148,19 +161,7 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading eyebrow="Mentorship" title="Doctoral scholars under supervision" />
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {phdSupervision.map((s) => (
-              <Card key={s.student}>
-                <p className="font-display text-lg text-foreground">{s.student}</p>
-                <p className="mt-2 text-sm text-foreground-muted">{s.area}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BackToTop />
     </>
   );
 }

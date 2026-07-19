@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/contact/contact-form";
 import { profile } from "@/data/profile";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact — Dr Dattatraya Vhatkar",
+export const metadata: Metadata = buildMetadata({
+  title: "Contact",
   description:
     "Get in touch with Dr Dattatraya Vhatkar for research collaboration, technology transfer, or speaking engagements.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

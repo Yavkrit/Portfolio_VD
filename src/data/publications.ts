@@ -27,6 +27,10 @@ export type Publication = {
   venue: string;
   year: number | null;
   citations: number | null;
+  // Only populated where the DOI was unambiguously confirmed against the
+  // original bio-data record — left unset rather than guessed for entries
+  // where the source document's line-wrapping made reconstruction unsafe.
+  doi?: string;
 };
 
 // Sourced live from Google Scholar (user=iva4O4MAAAAJ). A handful of malformed
@@ -109,6 +113,7 @@ export const publications: Publication[] = [
     venue: "Applied Physics A 128(7)",
     year: 2022,
     citations: 16,
+    doi: "10.1007/s00339-022-05747-y",
   },
   {
     title: "Development of zinc ferrite and activated charcoal based composites for microwave absorption analysis in X-band",
@@ -116,6 +121,7 @@ export const publications: Publication[] = [
     venue: "Journal of Sol-Gel Science and Technology 103(1)",
     year: 2022,
     citations: 10,
+    doi: "10.1007/s10971-022-05767-3",
   },
   {
     title: "Feasibility study of patch antenna for monitoring moisture content of made tea",
@@ -123,6 +129,7 @@ export const publications: Publication[] = [
     venue: "Journal of Microwave Power and Electromagnetic Energy 56(3)",
     year: 2022,
     citations: 2,
+    doi: "10.1080/08327823.2022.2107572",
   },
   {
     title: "Strain hardening and shock mitigation response of polyurethane under high strain rates",
@@ -130,6 +137,7 @@ export const publications: Publication[] = [
     venue: "AIP Advances 11(11)",
     year: 2021,
     citations: 10,
+    doi: "10.1063/5.0068403",
   },
   {
     title: "Design and Development of a Climb-Free Telescopic Mechanism for Harvesting from Tall Trees",
@@ -144,6 +152,7 @@ export const publications: Publication[] = [
     venue: "Current Organic Synthesis 17(8)",
     year: 2020,
     citations: 6,
+    doi: "10.2174/1570179417666200503050106",
   },
   {
     title: "Lanthanum doped barium hexaferrite nanoparticles for enhanced microwave absorption",
@@ -158,6 +167,7 @@ export const publications: Publication[] = [
     venue: "Current Organic Synthesis 17(8)",
     year: 2020,
     citations: 2,
+    doi: "10.2174/1570179417666200825164654",
   },
   {
     title: "Impact on optical, electrical and antibacterial response of microwave irradiated silver nanoparticles",
@@ -165,6 +175,7 @@ export const publications: Publication[] = [
     venue: "Journal of Materials Science: Materials in Electronics 30(7)",
     year: 2019,
     citations: 4,
+    doi: "10.1007/s10854-019-00939-4",
   },
   {
     title: "Ultrafast Carrier Dynamics of InxGa1-xN Nanostructures Grown Directly on Si (111)",
@@ -179,6 +190,7 @@ export const publications: Publication[] = [
     venue: "Materials Research Express 4(8)",
     year: 2017,
     citations: 9,
+    doi: "10.1088/2053-1591/aa7b42",
   },
   {
     title: "Prediction Model for Predicting Powdery Mildew using ANN for Medicinal Plant — Picrorhiza kurroa (Kutki)",
@@ -186,6 +198,7 @@ export const publications: Publication[] = [
     venue: "Journal of The Institution of Engineers (India): Series B 98(1)",
     year: 2017,
     citations: 4,
+    doi: "10.1007/s40031-016-0225-9",
   },
   {
     title: "Design and development of an early warning system for potato disease — late blight",

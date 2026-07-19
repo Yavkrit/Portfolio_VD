@@ -1,6 +1,11 @@
 export const profile = {
   name: "Dr Dattatraya Vhatkar",
   fullName: "Dr Dattatraya Vhatkar",
+  // Every publication, patent, and the Google Scholar/ResearchGate profiles
+  // linked from this site were indexed under this earlier name — surfaced
+  // explicitly wherever a visitor might otherwise see the two names as
+  // unrelated (see career-journey and publications pages).
+  formerName: "V. D. Shivling",
   title: "Chief Scientist",
   division: "IMCS Division",
   institute: "CSIR – Central Scientific Instruments Organisation (CSIO)",
@@ -80,4 +85,34 @@ export const phdSupervision = [
   { student: "S. Anup Chander", area: "Robotics and control systems" },
 ] as const;
 
-export const visionStatement = `As CSIR-CSIO looks toward the next decade, the world is moving decisively into technologies backed by high-end computing, artificial intelligence, and Industry 4.0. Building on the institute's strengths in robotics, optics, photonics, agri-instrumentation, imaging, avionics, and artificial intelligence, the path forward rests on five pillars: deeper industry collaboration that turns societal research into revenue and healthy competitiveness; indigenous technology development in step with national self-reliance goals; start-up incubation that lets thesis work graduate into engineering-backed ventures; academia exposure that keeps the institute's science current; and a collaborative, healthy work culture that makes all of the above sustainable. The throughline is balance — between industrial and societal work, between strong IPR and open scientific output, between rigorous instrumentation and the people who build it.`;
+// Restructured from the original single-paragraph vision statement into its
+// five labeled pillars for readability — every original clause is preserved
+// verbatim below, only the typographic structure has changed.
+export const visionIntro =
+  "As CSIR-CSIO looks toward the next decade, the world is moving decisively into technologies backed by high-end computing, artificial intelligence, and Industry 4.0. Building on the institute's strengths in robotics, optics, photonics, agri-instrumentation, imaging, avionics, and artificial intelligence, the path forward rests on five pillars.";
+
+export const visionPillars = [
+  {
+    title: "Industry Collaboration & Revenue",
+    body: "Deeper industry collaboration that turns societal research into revenue and healthy competitiveness.",
+  },
+  {
+    title: "National Self-Reliance",
+    body: "Indigenous technology development in step with national self-reliance goals.",
+  },
+  {
+    title: "Start-Up Incubation",
+    body: "Start-up incubation that lets thesis work graduate into engineering-backed ventures.",
+  },
+  {
+    title: "Academia Exposure",
+    body: "Academia exposure that keeps the institute's science current.",
+  },
+  {
+    title: "Collaborative Work Culture",
+    body: "A collaborative, healthy work culture that makes all of the above sustainable.",
+  },
+] as const;
+
+export const visionClosing =
+  "The throughline is balance — between industrial and societal work, between strong IPR and open scientific output, between rigorous instrumentation and the people who build it.";

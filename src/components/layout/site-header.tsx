@@ -8,6 +8,33 @@ import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
+import { NavDropdown } from "./nav-dropdown";
+
+// Consecutive nav entries sharing a `group` collapse into one dropdown on
+// the desktop bar (keeps a 7-destination site down to 6 visible top-level
+// items). Mobile stays fully flat — see the accordion below — since a
+// vertical list doesn't have the same crowding problem a horizontal bar does.
+type DesktopNavEntry =
+  | { kind: "link"; label: string; href: string }
+  | { kind: "group"; label: string; items: { label: string; href: string }[] };
+
+function groupForDesktop(): DesktopNavEntry[] {
+  const entries: DesktopNavEntry[] = [];
+  for (const link of navLinks) {
+    const group = "group" in link ? link.group : undefined;
+    const last = entries[entries.length - 1];
+    if (group && last?.kind === "group" && last.label === group) {
+      last.items.push({ label: link.label, href: link.href });
+    } else if (group) {
+      entries.push({ kind: "group", label: group, items: [{ label: link.label, href: link.href }] });
+    } else {
+      entries.push({ kind: "link", label: link.label, href: link.href });
+    }
+  }
+  return entries;
+}
+
+const desktopNav = groupForDesktop();
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -28,18 +55,22 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center justify-center gap-6 xl:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "whitespace-nowrap font-mono text-[12px] uppercase tracking-wider text-foreground-muted transition-colors hover:text-foreground",
-                pathname === link.href && "text-accent"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {desktopNav.map((entry) =>
+            entry.kind === "group" ? (
+              <NavDropdown key={entry.label} label={entry.label} items={entry.items} />
+            ) : (
+              <Link
+                key={entry.href}
+                href={entry.href}
+                className={cn(
+                  "whitespace-nowrap font-mono text-[12px] uppercase tracking-wider text-foreground-muted transition-colors hover:text-foreground",
+                  pathname === entry.href && "text-accent"
+                )}
+              >
+                {entry.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="flex items-center justify-end gap-3">
