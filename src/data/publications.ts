@@ -193,7 +193,7 @@ export const publications: Publication[] = [
     doi: "10.1088/2053-1591/aa7b42",
   },
   {
-    title: "Prediction Model for Predicting Powdery Mildew using ANN for Medicinal Plant — Picrorhiza kurroa (Kutki)",
+    title: "Prediction Model for Predicting Powdery Mildew using ANN for Medicinal Plant: Picrorhiza kurroa (Kutki)",
     authors: "V.D. Shivling, C. Ghanshyam, R. Kumar, S. Kumar, R. Sharma, D. Kumar, et al.",
     venue: "Journal of The Institution of Engineers (India): Series B 98(1)",
     year: 2017,
@@ -201,7 +201,7 @@ export const publications: Publication[] = [
     doi: "10.1007/s40031-016-0225-9",
   },
   {
-    title: "Design and development of an early warning system for potato disease — late blight",
+    title: "Design and development of an early warning system for potato disease: late blight",
     authors: "A. Rai, S.K. Sharma, V.D. Shivling",
     venue: "International Journal of Innovative Research in Engineering & Management 3",
     year: 2016,
@@ -238,14 +238,14 @@ export const publications: Publication[] = [
   {
     title: "Disease Forecasting and Pest Management for Indian Apple: An Application of ICT",
     authors: "V.D. Shivling, S.K. Sharma, C. Ghanshyam, A.K. Sharma, D. Bhagat, et al.",
-    venue: "INROADS — An International Journal of Jaipur National University 3(1s)",
+    venue: "INROADS: An International Journal of Jaipur National University 3(1s)",
     year: 2014,
     citations: null,
   },
   {
     title: "Study and Development of Instrument for Plant Protection Applications Associated with Apple and Picrorhiza kurroa (Kutki) Diseases",
     authors: "V.D. Shivling, S.K. Sharma, C. Ghanshyam, S. Kumar, R. Kumar, S. Das, et al.",
-    venue: "INROADS — An International Journal of Jaipur National University 3(2)",
+    venue: "INROADS: An International Journal of Jaipur National University 3(2)",
     year: 2014,
     citations: null,
   },

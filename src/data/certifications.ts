@@ -19,7 +19,7 @@ export const certifications = [
     credentialId: "F-503042",
   },
   {
-    title: "Life Member — Instrument Society of India",
+    title: "Life Member, Instrument Society of India",
     organization: "Instrument Society of India (ISOI)",
     issued: "July 2009",
     credentialId: "811",

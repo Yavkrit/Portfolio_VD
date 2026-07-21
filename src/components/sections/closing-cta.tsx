@@ -12,7 +12,7 @@ export function ClosingCta() {
           For collaboration, technology transfer, or speaking engagements
         </h2>
         <p className="mt-4 text-base leading-relaxed text-foreground-muted">
-          Reach out through the contact form — every message is reviewed
+          Reach out through the contact form. Every message is reviewed
           personally.
         </p>
         <div className="mt-8 flex justify-center">

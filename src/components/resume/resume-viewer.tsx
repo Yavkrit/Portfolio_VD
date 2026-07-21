@@ -43,7 +43,7 @@ export function ResumeViewer() {
       <div className="hidden aspect-[8.5/11] w-full bg-background-inset md:block">
         <iframe
           src={`${RESUME_PATH}#view=FitH`}
-          title="Dr Dattatraya Vhatkar — Resume preview"
+          title="Resume preview for Dr Dattatraya Vhatkar"
           className="h-full w-full"
         />
       </div>

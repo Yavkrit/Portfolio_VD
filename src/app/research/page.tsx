@@ -26,7 +26,7 @@ export default function ResearchPage() {
       <PageHero
         eyebrow="Research"
         title="Instrumentation built to leave the lab"
-        description="Thirty-four funded projects spanning agrionics, microwave-absorbing nanomaterials, and biomechanics — engineered with field deployment, not publication alone, as the goal."
+        description="Thirty-four funded projects spanning agrionics, microwave-absorbing nanomaterials, and biomechanics, engineered with field deployment, not publication alone, as the goal."
       />
 
       <JumpNav
@@ -60,9 +60,9 @@ export default function ResearchPage() {
             eyebrow="Funded Projects"
             title="Flagship projects as Principal Investigator & coordinator"
           />
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {flagshipProjects.map((project) => (
-              <div key={project.title} className="bg-background p-6">
+              <Card key={project.title}>
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="font-display text-lg text-foreground">
                     {project.title}
@@ -81,7 +81,7 @@ export default function ResearchPage() {
                 <p className="mt-3 text-sm leading-relaxed text-foreground-muted">
                   {project.description}
                 </p>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

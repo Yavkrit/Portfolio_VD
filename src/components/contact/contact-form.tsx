@@ -58,7 +58,7 @@ export function ContactForm() {
       <div className="border border-border-strong bg-background-elevated p-10 text-center">
         <p className="font-display text-2xl text-foreground">Message sent</p>
         <p className="mt-2 text-sm text-foreground-muted">
-          Thank you for reaching out — your message has been received and will be
+          Thank you for reaching out. Your message has been received and will be
           reviewed personally.
         </p>
       </div>

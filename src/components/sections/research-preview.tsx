@@ -12,7 +12,7 @@ export function ResearchPreview() {
           <SectionHeading
             eyebrow="01 / Research"
             title="Thirty-two years of instrumentation, one throughline"
-            description="From patch-antenna moisture sensors to microwave-absorbing nanomaterials and prosthetic mechanisms — applied electronics built to leave the lab."
+            description="From patch-antenna moisture sensors to microwave-absorbing nanomaterials and prosthetic mechanisms: applied electronics built to leave the lab."
           />
           <Link
             href="/research"

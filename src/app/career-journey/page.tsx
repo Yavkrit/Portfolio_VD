@@ -22,7 +22,7 @@ export default function CareerJourneyPage() {
       <PageHero
         eyebrow="Career Journey"
         title="Thirty-two years at CSIR-CSIO"
-        description="A career built one instrument at a time — from an entry-level Scientist B post in 1993 to leading the Agrionics programme as Chief Scientist today."
+        description="A career built one instrument at a time, from an entry-level Scientist B post in 1993 to leading the Agrionics programme as Chief Scientist today."
       />
 
       <section className="border-b border-border py-20">
@@ -45,7 +45,7 @@ export default function CareerJourneyPage() {
               {profile.formerName && (
                 <p className="mt-4 text-xs text-foreground-subtle">
                   Formerly published as{" "}
-                  <span className="text-foreground-muted">{profile.formerName}</span> —
+                  <span className="text-foreground-muted">{profile.formerName}</span>,
                   the same individual as {profile.name}.
                 </p>
               )}
@@ -121,7 +121,7 @@ export default function CareerJourneyPage() {
                   View the full resume
                 </p>
                 <p className="mt-1 text-sm text-foreground-muted">
-                  A single-page summary of the career above — view or download as PDF.
+                  A single-page summary of the career above, available to view or download as PDF.
                 </p>
               </div>
             </div>

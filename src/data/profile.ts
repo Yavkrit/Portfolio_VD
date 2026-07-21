@@ -11,7 +11,7 @@ export const profile = {
   institute: "CSIR – Central Scientific Instruments Organisation (CSIO)",
   location: "Chandigarh, India",
   specialization:
-    "Electronics for Agrionics Instrumentation — Sensors & Systems for Pre- and Post-Harvest Technologies",
+    "Electronics for Agrionics Instrumentation: Sensors & Systems for Pre- and Post-Harvest Technologies",
   tagline:
     "Thirty years turning sensor physics into instruments for farmers in the areas of pre- and post-harvest agriculture and industry.",
 } as const;

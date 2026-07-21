@@ -3,41 +3,99 @@ export const honors = [
     title: "Head of Department, Agrionics",
     org: "CSIR-CSIO",
     period: "Jan 2015 – Jun 2021",
+    detail: "",
   },
   {
     title: "Honorary Professor",
     org: "AcSIR-CSIO",
     period: "",
+    detail: "",
   },
   {
     title: "Expert Committee Member, PRSG",
     org: "Ministry of Information & Communication Technology (MeitY), Govt. of India",
     period: "",
+    detail: "",
   },
   {
     title: "Contributor, 12th Five Year Plan formulation",
     org: "CSIR-CSIO project planning",
     period: "",
+    detail: "",
   },
   {
     title: "Chairman, Security Committee",
     org: "CSIR-CSIO",
     period: "2018 – Present",
+    detail: "",
   },
   {
     title: "Chairman, Disaster Management Committee",
     org: "CSIR-CSIO",
     period: "",
+    detail:
+      "Prepared a comprehensive Disaster Management Plan for the organization, uploaded to the CSIR-CSIO website, and submitted to the National Disaster Management Authority (NDMA) through the Director, CBRI Roorkee, Uttar Pradesh.",
   },
   {
     title: "Member, ACR Collegium for Principal & Sr. Principal Scientist",
     org: "CSIR-CSIO",
     period: "2022 – Present",
+    detail: "",
   },
   {
     title: "Liaison Officer, SC/ST/PWD",
     org: "CSIR-CSIO",
     period: "2014 – 2019",
+    detail: "",
+  },
+  {
+    title: "Chairman, ISTAG",
+    org: "CSIR-CSIO",
+    period: "up to 2 Aug 2024",
+    detail: "Processed four foreign deputation cases.",
+  },
+  {
+    title: "Member, ACR Collegiums for Principal Scientist to Scientist (EII & F)",
+    org: "CSIR-CSIO",
+    period: "up to 12 Aug 2024",
+    detail: "",
+  },
+  {
+    title: "Chairman, Compassionate Ground Appointment Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail: "",
+  },
+  {
+    title: "Chairman, Energy Management Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail: "",
+  },
+  {
+    title: "Chairman, Library Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail: "",
+  },
+  {
+    title: "Chairman, AcSIR Article Review Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail: "Processed PhD article reviews, with 18 candidates cleared during this period.",
+  },
+  {
+    title: "Co-Chairman, ISTC Oversight Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail: "",
+  },
+  {
+    title: "Chairman, Contingency Plan Committee",
+    org: "CSIR-CSIO",
+    period: "",
+    detail:
+      "Prepared the organization's Contingency Plan and submitted it to the Deputy Commissioner's Office, Chandigarh.",
   },
 ] as const;
 

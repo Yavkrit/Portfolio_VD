@@ -27,7 +27,7 @@ export default function ResumePage() {
       <PageHero
         eyebrow="Resume"
         title="A single-page summary of the career"
-        description="For a formal record of the roles, projects, and output behind the research shown across this site — view it inline or download the PDF."
+        description="For a formal record of the roles, projects, and output behind the research shown across this site, view it inline or download the PDF."
       />
 
       <section className="py-20">

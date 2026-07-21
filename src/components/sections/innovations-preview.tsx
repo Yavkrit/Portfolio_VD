@@ -14,7 +14,7 @@ export function InnovationsPreview() {
           <SectionHeading
             eyebrow="03 / Patents & Innovations"
             title="From prototype to licensed technology"
-            description="Two filed patents and seven technologies transferred to industry partners across India — electrostatic disinfection, prosthetics, and precision sensing."
+            description="Two filed patents and seven technologies transferred to industry partners across India: electrostatic disinfection, prosthetics, and precision sensing."
           />
           <Link
             href="/innovations"

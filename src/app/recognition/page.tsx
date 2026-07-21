@@ -21,7 +21,7 @@ export default function RecognitionPage() {
       <PageHero
         eyebrow="Recognition"
         title="Institutional leadership & professional standing"
-        description="Beyond the bench — committee leadership, national-level policy input, and professional fellowships built over thirty-two years at CSIR-CSIO."
+        description="Beyond the bench, with committee leadership, national-level policy input, and professional fellowships built over thirty-two years at CSIR-CSIO."
       />
 
       <section className="border-b border-border py-20">
@@ -29,18 +29,22 @@ export default function RecognitionPage() {
           <SectionHeading eyebrow="Honors & Leadership" title="Institutional roles held" />
           <div className="mt-10 divide-y divide-border border-t border-border">
             {honors.map((honor) => (
-              <div
-                key={honor.title}
-                className="flex flex-wrap items-baseline justify-between gap-2 py-5"
-              >
-                <div>
-                  <p className="font-display text-lg text-foreground">{honor.title}</p>
-                  <p className="text-sm text-foreground-muted">{honor.org}</p>
+              <div key={honor.title} className="py-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div>
+                    <p className="font-display text-lg text-foreground">{honor.title}</p>
+                    <p className="text-sm text-foreground-muted">{honor.org}</p>
+                  </div>
+                  {honor.period && (
+                    <span className="font-mono text-xs text-foreground-subtle">
+                      {honor.period}
+                    </span>
+                  )}
                 </div>
-                {honor.period && (
-                  <span className="font-mono text-xs text-foreground-subtle">
-                    {honor.period}
-                  </span>
+                {honor.detail && (
+                  <p className="mt-2 text-sm leading-relaxed text-foreground-muted">
+                    {honor.detail}
+                  </p>
                 )}
               </div>
             ))}

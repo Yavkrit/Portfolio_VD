@@ -71,7 +71,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">
             {profile.tagline} Thirty-two years engineering sensors and instrumentation
-            for agrionics — from lab prototype to licensed technology.
+            for agrionics, from lab prototype to licensed technology.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">

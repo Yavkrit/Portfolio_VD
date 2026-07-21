@@ -75,7 +75,7 @@ export function PublicationsList({ publications }: { publications: Publication[]
             className="grid gap-2 py-5 sm:grid-cols-[4rem_1fr_6rem] sm:gap-6"
           >
             <span className="font-mono text-sm text-foreground-subtle">
-              {pub.year ?? "—"}
+              {pub.year ?? ""}
             </span>
             <div>
               <p className="text-base leading-snug text-foreground">{pub.title}</p>

@@ -14,7 +14,7 @@ export const flagshipProjects: Project[] = [
     funding: "₹28.78 Lakhs",
     fundingAgency: "DST, Govt. of India",
     description:
-      "Patch-antenna based moisture analysis for tea samples — electronics hardware, antenna design, embedded software, and lab-to-field prototyping.",
+      "Patch-antenna based moisture analysis for tea samples: electronics hardware, antenna design, embedded software, and lab-to-field prototyping.",
   },
   {
     title: "Early Warning System for Plant Protection & Pest Control",
@@ -84,7 +84,7 @@ export const flagshipProjects: Project[] = [
     description: "Joint design and testing for bamboo and composite structural sections.",
   },
   {
-    title: "Electrostatic Spraying Technology — Facility Creation",
+    title: "Electrostatic Spraying Technology: Facility Creation",
     role: "Team Member / Administrative Role",
     funding: "₹300 Lakhs",
     fundingAgency: "CSIR OLP",
@@ -117,7 +117,7 @@ export const researchAreas = [
   {
     title: "Agrionics & Sensor Instrumentation",
     description:
-      "Sensor and electronics design for pre- and post-harvest technologies — moisture, disease, and crop-growth measurement systems built for field conditions.",
+      "Sensor and electronics design for pre- and post-harvest technologies: moisture, disease, and crop-growth measurement systems built for field conditions.",
   },
   {
     title: "Microwave-Absorbing Nanomaterials",

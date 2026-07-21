@@ -21,7 +21,7 @@ export default function PublicationsPage() {
       <PageHero
         eyebrow="Publications"
         title="Peer-reviewed research, 2004–present"
-        description="Thirty-four publications across sensor instrumentation, microwave-absorbing nanomaterials, and biomechanics — spanning journals in the US, Germany, UK, Switzerland, and India."
+        description="Thirty-four publications across sensor instrumentation, microwave-absorbing nanomaterials, and biomechanics, spanning journals in the US, Germany, UK, Switzerland, and India."
       />
 
       <JumpNav

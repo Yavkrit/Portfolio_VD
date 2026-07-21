@@ -17,7 +17,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Start a conversation"
-        description="For research collaboration, technology transfer, invited talks, or student supervision inquiries — send a message below."
+        description="For research collaboration, technology transfer, invited talks, or student supervision inquiries, send a message below."
       />
 
       <section className="py-20">
