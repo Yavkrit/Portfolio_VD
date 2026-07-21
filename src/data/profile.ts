@@ -13,7 +13,7 @@ export const profile = {
   specialization:
     "Electronics for Agrionics Instrumentation — Sensors & Systems for Pre- and Post-Harvest Technologies",
   tagline:
-    "Thirty years turning sensor physics into instruments farmers and industry actually use.",
+    "Thirty years turning sensor physics into instruments for farmers in the areas of pre- and post-harvest agriculture and industry.",
 } as const;
 
 export const education = [
@@ -84,35 +84,3 @@ export const phdSupervision = [
   { student: "Amandeep Singh", area: "High strain-rate compressive response of polyurethane for shock mitigation of embedded electronics (thesis submitted)" },
   { student: "S. Anup Chander", area: "Robotics and control systems" },
 ] as const;
-
-// Restructured from the original single-paragraph vision statement into its
-// five labeled pillars for readability — every original clause is preserved
-// verbatim below, only the typographic structure has changed.
-export const visionIntro =
-  "As CSIR-CSIO looks toward the next decade, the world is moving decisively into technologies backed by high-end computing, artificial intelligence, and Industry 4.0. Building on the institute's strengths in robotics, optics, photonics, agri-instrumentation, imaging, avionics, and artificial intelligence, the path forward rests on five pillars.";
-
-export const visionPillars = [
-  {
-    title: "Industry Collaboration & Revenue",
-    body: "Deeper industry collaboration that turns societal research into revenue and healthy competitiveness.",
-  },
-  {
-    title: "National Self-Reliance",
-    body: "Indigenous technology development in step with national self-reliance goals.",
-  },
-  {
-    title: "Start-Up Incubation",
-    body: "Start-up incubation that lets thesis work graduate into engineering-backed ventures.",
-  },
-  {
-    title: "Academia Exposure",
-    body: "Academia exposure that keeps the institute's science current.",
-  },
-  {
-    title: "Collaborative Work Culture",
-    body: "A collaborative, healthy work culture that makes all of the above sustainable.",
-  },
-] as const;
-
-export const visionClosing =
-  "The throughline is balance — between industrial and societal work, between strong IPR and open scientific output, between rigorous instrumentation and the people who build it.";

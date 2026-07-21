@@ -29,7 +29,7 @@ const plexMono = IBM_Plex_Mono({
 
 const title = "Dr Dattatraya Vhatkar — Chief Scientist, CSIR-CSIO";
 const description =
-  "Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO — three decades of sensor and instrumentation research for agrionics, pre- and post-harvest technologies, and applied electronics.";
+  "Dr Dattatraya Vhatkar, Chief Scientist at CSIR-CSIO — thirty-two years of sensor and instrumentation research for agrionics, pre- and post-harvest technologies, and applied electronics.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

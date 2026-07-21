@@ -5,12 +5,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Card } from "@/components/ui/card";
 import { honors } from "@/data/recognition";
 import { certifications } from "@/data/certifications";
-import {
-  professionalAffiliations,
-  visionIntro,
-  visionPillars,
-  visionClosing,
-} from "@/data/profile";
+import { professionalAffiliations } from "@/data/profile";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -26,7 +21,7 @@ export default function RecognitionPage() {
       <PageHero
         eyebrow="Recognition"
         title="Institutional leadership & professional standing"
-        description="Beyond the bench — committee leadership, national-level policy input, and professional fellowships built over three decades at CSIR-CSIO."
+        description="Beyond the bench — committee leadership, national-level policy input, and professional fellowships built over thirty-two years at CSIR-CSIO."
       />
 
       <section className="border-b border-border py-20">
@@ -72,7 +67,7 @@ export default function RecognitionPage() {
         </div>
       </section>
 
-      <section className="border-b border-border py-20">
+      <section className="py-20">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             eyebrow="Licenses & Certifications"
@@ -99,34 +94,6 @@ export default function RecognitionPage() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-6">
-          <SectionHeading
-            eyebrow="Vision"
-            title="On leading CSIR-CSIO into the next decade"
-            description={visionIntro}
-          />
-          <ol className="mt-10 space-y-6">
-            {visionPillars.map((pillar, i) => (
-              <li key={pillar.title} className="flex gap-5 border-b border-border pb-6">
-                <span className="font-mono text-sm text-foreground-subtle">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="font-display text-lg text-foreground">{pillar.title}</p>
-                  <p className="mt-1 text-base leading-relaxed text-foreground-muted">
-                    {pillar.body}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-8 text-lg leading-relaxed text-foreground-muted">
-            {visionClosing}
-          </p>
         </div>
       </section>
     </>

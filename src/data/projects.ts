@@ -60,7 +60,7 @@ export const flagshipProjects: Project[] = [
   },
   {
     title: "Mobile Soil-Sensing System & Digital Spatial Repository",
-    role: "Theme Coordinator",
+    role: "Team Member",
     funding: "₹118 Lakhs",
     fundingAgency: "CSIR ANB Mission",
     description:
@@ -69,7 +69,7 @@ export const flagshipProjects: Project[] = [
   {
     title: "Customized Flow Hive for Wax-Free Honey Extraction",
     years: "2018–2020",
-    role: "Program Coordinator",
+    role: "Program Coordinator / Nodal Officer",
     funding: "₹68 Lakhs",
     fundingAgency: "CSIR ANB Mission",
     description:
@@ -85,7 +85,7 @@ export const flagshipProjects: Project[] = [
   },
   {
     title: "Electrostatic Spraying Technology — Facility Creation",
-    role: "Head of Division",
+    role: "Team Member / Administrative Role",
     funding: "₹300 Lakhs",
     fundingAgency: "CSIR OLP",
     description:
@@ -96,14 +96,6 @@ export const flagshipProjects: Project[] = [
     funding: "₹19.50 Lakhs",
     role: "Team Member",
     description: "Photosynthesis-index electronics feeding a machine-learning water-quality model.",
-  },
-  {
-    title: "Smart Monitoring System for Livestock Emissions",
-    years: "2017–2020",
-    role: "Team Lead Support (HoD)",
-    funding: "₹20.89 Lakhs",
-    fundingAgency: "SEED, DST",
-    description: "Electronics and administrative oversight for a livestock-emissions sensing system.",
   },
   {
     title: "Electrostatic Nozzle for Agricultural Applications",
@@ -150,15 +142,20 @@ export const technologiesAsPI = [
   "Early Warning System for Plant Protection and Pest Control",
   "Indigenized Lyophiliser for Preservation of Indian Fruits and Vegetables",
   "Customized Flow Hive for Quality Honey Extraction",
-  "Bamboo Structures (Composite Sections & Joints)",
   "Smart Agro-Informatics and Green IoT for Agriculture-4.0 (SAGITA)",
-  "Mobile Soil Salinity Testing System",
 ] as const;
 
+// Every technology above was also carried through to a working prototype —
+// the three entries below map directly to the technologies-as-PI list
+// (Controlled Storage / Crop Growth Sensors / Early Warning System already
+// appear here under their prototype-stage naming, so aren't repeated).
 export const prototypesDeveloped = [
   "Sensor and Instrumentation for Crop Growth (Photosynthesis)",
   "Controlled Storage for Fruits and Vegetables",
   "Digital Moisture Probe for Grains",
   "Hand-Held Moisture Meter for Made Tea",
   "Early Warning System for Plant Protection & Pest Control (Kutki)",
+  "Indigenized Lyophiliser for Preservation of Indian Fruits and Vegetables",
+  "Customized Flow Hive for Quality Honey Extraction",
+  "Smart Agro-Informatics and Green IoT for Agriculture-4.0 (SAGITA)",
 ] as const;

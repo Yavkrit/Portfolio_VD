@@ -12,7 +12,7 @@ import { ProfileLinks } from "@/components/sections/profile-links";
 import { HeroScene } from "./hero-scene";
 
 const metrics = [
-  { label: "Years in Research", value: "30+" },
+  { label: "Years in Research", value: "32+" },
   { label: "Citations", value: `${scholarMetrics.totalCitations}` },
   { label: "H-Index", value: `${scholarMetrics.hIndex}` },
   { label: "Patents Filed", value: "2" },
@@ -70,7 +70,7 @@ export function Hero() {
             {profile.name}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">
-            {profile.tagline} Three decades engineering sensors and instrumentation
+            {profile.tagline} Thirty-two years engineering sensors and instrumentation
             for agrionics — from lab prototype to licensed technology.
           </p>
 

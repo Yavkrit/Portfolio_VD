@@ -11,7 +11,7 @@ export function ResearchPreview() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
             eyebrow="01 / Research"
-            title="Four decades of instrumentation, one throughline"
+            title="Thirty-two years of instrumentation, one throughline"
             description="From patch-antenna moisture sensors to microwave-absorbing nanomaterials and prosthetic mechanisms — applied electronics built to leave the lab."
           />
           <Link
