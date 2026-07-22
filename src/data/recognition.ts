@@ -173,3 +173,7 @@ export const technologyTransfers = [
     role: "Lab testing, planning, commercial negotiation for ToT",
   },
 ] as const;
+
+// Distinct states among the partners above: Maharashtra, Haryana, Karnataka,
+// Rajasthan, and Punjab.
+export const technologyTransferStatesReached = 5;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { patents, technologyTransfers } from "@/data/recognition";
+import { patents, technologyTransfers, technologyTransferStatesReached } from "@/data/recognition";
 import { SectionHeading } from "./section-heading";
 import { Card } from "@/components/ui/card";
 
@@ -42,9 +42,11 @@ export function InnovationsPreview() {
             </p>
           </Card>
           <Card>
-            <p className="font-display text-4xl text-foreground tabular-nums">₹25 Cr+</p>
+            <p className="font-display text-4xl text-foreground tabular-nums">
+              {technologyTransferStatesReached}
+            </p>
             <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
-              Cumulative Project Funding
+              States Reached
             </p>
           </Card>
         </div>

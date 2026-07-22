@@ -67,9 +67,9 @@ export const professionalAffiliations = [
 ] as const;
 
 export const researchImpactSummary = {
-  externallyFundedProjects: { count: 6, value: "₹2 Cr" },
-  csirProjects: { count: 8, value: "₹15 Cr" },
-  departmentalProjects: { count: 20, value: "₹8.2 Cr" },
+  externallyFundedProjects: { count: 6 },
+  csirProjects: { count: 8 },
+  departmentalProjects: { count: 20 },
   technologyReports: "~100",
   technicalReports: "~10",
   invitedTalks: 5,

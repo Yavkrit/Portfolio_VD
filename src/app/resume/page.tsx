@@ -3,6 +3,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { ResumeViewer } from "@/components/resume/resume-viewer";
 import { researchImpactSummary } from "@/data/profile";
 import { scholarMetrics } from "@/data/publications";
+import { technologyTransferStatesReached } from "@/data/recognition";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -14,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 const quickFacts = [
   { label: "Experience", value: "32+ years" },
-  { label: "Cumulative Project Value", value: "₹25 Cr+" },
+  { label: "States Reached", value: `${technologyTransferStatesReached}` },
   { label: "Peer-Reviewed Publications", value: "34" },
   { label: "Citations", value: `${scholarMetrics.totalCitations}` },
   { label: "Patents Filed", value: "2" },

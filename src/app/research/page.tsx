@@ -63,16 +63,7 @@ export default function ResearchPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {flagshipProjects.map((project) => (
               <Card key={project.title}>
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="font-display text-lg text-foreground">
-                    {project.title}
-                  </h3>
-                  {project.funding && (
-                    <span className="font-mono text-xs tabular-nums text-accent">
-                      {project.funding}
-                    </span>
-                  )}
-                </div>
+                <h3 className="font-display text-lg text-foreground">{project.title}</h3>
                 <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
                   {project.role}
                   {project.years ? ` · ${project.years}` : ""}
@@ -129,17 +120,14 @@ export default function ResearchPage() {
               {
                 label: "Externally Funded",
                 value: researchImpactSummary.externallyFundedProjects.count,
-                sub: researchImpactSummary.externallyFundedProjects.value,
               },
               {
                 label: "CSIR Projects",
                 value: researchImpactSummary.csirProjects.count,
-                sub: researchImpactSummary.csirProjects.value,
               },
               {
                 label: "Departmental Projects",
                 value: researchImpactSummary.departmentalProjects.count,
-                sub: researchImpactSummary.departmentalProjects.value,
               },
               {
                 label: "PG Theses Supervised",
@@ -154,7 +142,9 @@ export default function ResearchPage() {
                 <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-foreground-subtle">
                   {stat.label}
                 </p>
-                <p className="text-xs text-foreground-subtle">{stat.sub}</p>
+                {"sub" in stat && (
+                  <p className="text-xs text-foreground-subtle">{stat.sub}</p>
+                )}
               </div>
             ))}
           </div>

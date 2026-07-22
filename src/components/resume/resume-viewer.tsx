@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button";
 const RESUME_PATH = "/documents/dr-dattatraya-vhatkar-resume.pdf";
 const RESUME_FILENAME = "Dr-Dattatraya-Vhatkar-Resume.pdf";
 
-// The résumé's own opening summary, quoted verbatim — gives mobile visitors
-// real content to read in place of the inline PDF preview (unreliable on
+// Adapted from the résumé's own opening summary (funding and revenue
+// figures omitted throughout this site) — gives mobile visitors real
+// content to read in place of the inline PDF preview (unreliable on
 // mobile browsers) rather than an empty placeholder state.
 const SUMMARY_EXCERPT =
-  "R&D leader with 32+ years at CSIR-CSIO advancing sensors, embedded instrumentation, and IoT systems for pre- and post-harvest agriculture (Agrionics). Directed a ₹25+ crore portfolio of 34 projects; delivered 8 technologies as PI/Nodal Officer and drove 7 industry technology transfers realizing ₹36.25 lakh in licensing revenue.";
+  "R&D leader with 32+ years at CSIR-CSIO advancing sensors, embedded instrumentation, and IoT systems for pre- and post-harvest agriculture (Agrionics). Directed a substantial portfolio of 34 projects; delivered 8 technologies as PI/Nodal Officer and drove 7 industry technology transfers across 5 Indian states.";
 
 export function ResumeViewer() {
   return (
